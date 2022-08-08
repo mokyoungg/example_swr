@@ -18,6 +18,7 @@ export const ButtonContainer = styled.div`
     border: none;
     border-radius: 4px;
     color: #fff;
+    cursor: pointer;
   }
 `;
 

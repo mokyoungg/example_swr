@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ImgContainer = styled.div`
   width: 300px;
-  height: auto;
+  height: 300px;
 `;
 
 export const Img = styled.img`
