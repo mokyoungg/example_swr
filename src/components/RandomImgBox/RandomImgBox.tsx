@@ -5,14 +5,14 @@ import Loader from '../Loader/Loader';
 import useRandomImg from '../../hooks/useRandomImg';
 
 const RandomImgBox: React.FC = () => {
-  const { isValidating, randomImg, getRandomImg } = useRandomImg();
+  const { isLoading, randomImg, getRandomImg } = useRandomImg();
 
   return (
     <S.Container>
-      {isValidating ? <Loader /> : <ImageBox img={randomImg.url} />}
+      {isLoading ? <Loader /> : <ImageBox img={randomImg.url} />}
       <S.ButtonContainer>
         <S.LikeBtn className="button">Like</S.LikeBtn>
-        <S.RandomBtn className="button" onClick={getRandomImg}>
+        <S.RandomBtn className="button" onClick={() => getRandomImg()}>
           Random
         </S.RandomBtn>
       </S.ButtonContainer>

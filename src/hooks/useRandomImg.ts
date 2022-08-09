@@ -14,6 +14,8 @@ const useRandomImg = () => {
   const { isValidating, mutate } = useSWR(`/photos/random`, randomImgFetcher, {
     revalidateIfStale: false,
     revalidateOnFocus: false,
+    shouldRetryOnError: false,
+
     onSuccess: (data: any) => {
       const { id, urls } = data;
 
@@ -21,14 +23,10 @@ const useRandomImg = () => {
     },
   });
 
-  const getRandomImg = useCallback(() => {
-    mutate();
-  }, []);
-
   return {
-    isValidating,
+    isLoading: isValidating,
     randomImg,
-    getRandomImg,
+    getRandomImg: mutate,
   };
 };
 
