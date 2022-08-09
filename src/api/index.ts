@@ -1,9 +1,13 @@
 import axios from 'axios';
 
 const baseURL = process.env.REACT_APP_API_URL;
+const key = process.env.REACT_APP_ACCESS_KEY;
 
 const baseInstance = axios.create({
   baseURL,
+  headers: {
+    Authorization: `Client-ID ${key}`,
+  },
 });
 
 baseInstance.interceptors.response.use(({ data }) => data);
