@@ -1,5 +1,5 @@
 import React from 'react';
-import RandomImgBox from './RandomImgBox/RandomImgBox';
+import RandomImgBox from './components/RandomImgBox/RandomImgBox';
 
 function App() {
   return (

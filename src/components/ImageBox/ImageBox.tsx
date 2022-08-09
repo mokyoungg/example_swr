@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageUrl from '../asset/swr_img.jpg';
+import ImageUrl from '../../asset/swr_img.jpg';
 import * as S from './ImageBox.style';
 
 export interface Props {
